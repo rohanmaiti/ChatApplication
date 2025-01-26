@@ -37,6 +37,8 @@
  *   app.use(cookieParser());
  *   
  *  
+ *   * CLOUDINARY SETUP FOR IMAGES
+ *   
  * 
- * 
+ *   * HANDLE REFRESH USING /check ROUTE
 */
