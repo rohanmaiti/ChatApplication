@@ -1,5 +1,6 @@
 const Message = require("../models/message.model");
 
+// GET USERS FOR SIDE BAR
 async function getUsersForSidebar(req,res){
     try {
         const loggedInUserId = req.user._id;
@@ -12,6 +13,8 @@ async function getUsersForSidebar(req,res){
       }
 }
 
+
+// GET MESSAGES TO THE 
 async function getMessages(req,res){
     try{
     const { id: userToChatId } = req.params;
@@ -67,5 +70,5 @@ async function sendMessages(req,res){
 module.exports = {
     getUsersForSidebar,
     getMessages,
-
+    sendMessages
 }

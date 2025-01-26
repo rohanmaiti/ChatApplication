@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const dotenv = require("dotenv");
+dotenv.config();
 const cookieParser = require("cookie-parser");
 const connectDB = require("./lib/db.js");
 
@@ -15,9 +17,15 @@ connectDB().then(()=>console.log("Connected to DB"))
 
 
 const authRoutes = require("./routes/auth.route.js");
+const messageRoutes = require("./routes/message.route.js");
 
-dotenv.config();
+
+app.use(cors({
+    origin:"http://localhost:5173",
+    credentials:true,
+}));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cookieParser());
 app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);

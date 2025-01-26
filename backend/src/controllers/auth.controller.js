@@ -13,9 +13,9 @@ async function signup(req,res){
     if(password.length < 6){
         return res.status(400).send({message:"Password must be at least 6 characters long"});
     }
-    var user = await User.find({email:email});
+    var user = await User.findOne({email:email});
     console.log("usr", user);
-    if(user == []){
+    if(user){
         return res.status(400).send({message:"email already exists"});
     }
     // Hashing the password
