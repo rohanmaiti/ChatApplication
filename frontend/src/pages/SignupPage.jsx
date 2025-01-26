@@ -36,7 +36,7 @@ export const SignupPage = () => {
     <div className="min-h-screen grid lg:grid-cols-1">
     {/* box start */}
     <div className="flex flex-col justify-center items-center p-6 sm:p-12 ">
-        <div className="w-full max-w-md space-y-8 shadow-cyan-200/100 border-blue-300  border-2 p-8 rounded-2xl shadow-sm hover:border-blue-100 ">
+        <div className="w-full max-w-md space-y-8 shadow-blue-500/100 border-blue-500  border-2 p-8 rounded-2xl shadow-sm hover:border-blue-100 ">
           {/* LOGO */}
           <div className="text-center mb-8">
             <div className="flex flex-col items-center gap-2 group">
@@ -117,7 +117,7 @@ export const SignupPage = () => {
               </div>
             </div>
 
-            <button type="submit" className="btn bg-blue-500 text-white hover:bg-blue-700 w-full" disabled={isSigningUp}>
+            <button type="submit" className="btn bg-blue-500 text-white hover:bg-green-700 w-full" disabled={isSigningUp}>
               {isSigningUp ? (
                 <>
                   <Loader2 className="size-5 animate-spin" />
