@@ -11,8 +11,16 @@ export const LoginPage = () => {
     password: "",
   });
   const { login, isLoggingIn } = useAuthStore();
+  const validateForm = ()=> {
+    if (!formData.email.trim()) return toast.error("Email is required");
+    if (!formData.password) return toast.error("Password is required");
+    
+    return true;
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const success = validateForm();
+    if(success)
     login(formData);
   };
   
