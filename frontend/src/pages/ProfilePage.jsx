@@ -60,8 +60,12 @@ export const ProfilePage = () => {
                 />
               </label>
             </div>
-            <p className="text-sm text-zinc-400">
-              {isUpdatingProfile ? "Uploading..." : "Click the camera icon to update your photo"}
+            <p className="text-sm text-zinc-400 text-center">
+              {isUpdatingProfile ? "Uploading..." : "Click the camera icon to update your photo"} <br/>
+                <p className="text-sm text-zinc-400 text-center">
+                {"max size should be less than 30kb"}
+                </p>
+             
             </p>
           </div>
 
