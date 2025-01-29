@@ -53,7 +53,7 @@ async function login(req,res){
     }
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if(!isPasswordValid){
-        return res.status(400).send({message:"Invalid Credentials, Password not matched"});
+        return res.status(400).send({message:"Invalid Credentials, password not matched"});
     }
     else{
     generateToken(user._id, res);
