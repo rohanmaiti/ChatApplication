@@ -14,7 +14,7 @@ async function getUsersForSidebar(req,res){
 }
 
 
-// GET MESSAGES TO THE 
+// GET MESSAGES for parlicular userid 
 async function getMessages(req,res){
     try{
     const { id: userToChatId } = req.params;
@@ -26,7 +26,7 @@ async function getMessages(req,res){
             {senderId:userToChatId, receiverId:myId}
         ]
     })
-    res.status(200).json(message);
+    res.status(200).json(messages);
     }
     catch(err){
         console.log("Error in getting Messages", err.message);
