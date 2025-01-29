@@ -86,7 +86,7 @@ async function updateProfile(req,res){
         user.fullName = fullName;
         user.profilePic = profilePic;
         await user.save();
-        res.status(200).send({message:"Profile Updated", user:user});
+        res.status(200).send(user);
     } catch (error) {
         res.status(500).send({message:"Server Error "+error.message});
     }
