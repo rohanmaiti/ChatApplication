@@ -20,7 +20,7 @@ export const LoginPage = () => {
     <div className="h-screen grid lg:grid-cols-1">
     {/* Left Side - Form */}
     <div className="flex flex-col justify-center items-center p-6 sm:p-12">
-      <div className="w-full max-w-md space-y-8">
+      <div className="w-full max-w-md space-y-8 shadow-blue-500/100 border-blue-500  border-2 p-8 rounded-2xl shadow-sm hover:border-blue-100">
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="flex flex-col items-center gap-2 group">
@@ -48,7 +48,7 @@ export const LoginPage = () => {
               <input
                 type="email"
                 className={`input input-bordered w-full pl-10`}
-                placeholder="you@example.com"
+                placeholder="Enter your email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
@@ -66,7 +66,7 @@ export const LoginPage = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 className={`input input-bordered w-full pl-10`}
-                placeholder="••••••••"
+                placeholder="Enter your password"
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
               />
@@ -84,7 +84,7 @@ export const LoginPage = () => {
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary w-full" disabled={isLoggingIn}>
+          <button type="submit" className="btn bg-blue-500 text-white hover:bg-green-700 w-full" disabled={isLoggingIn}>
             {isLoggingIn ? (
               <>
                 <Loader2 className="h-5 w-5 animate-spin" />
