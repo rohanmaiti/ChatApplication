@@ -77,20 +77,7 @@ function logout(req,res){
    
 }
 
-
-// UPDATE
-async function updateProfile(req,res){
-    try {
-        const {fullName, profilePic} = req.body;
-        const user = req.user;
-        user.fullName = fullName;
-        user.profilePic = profilePic;
-        await user.save();
-        res.status(200).send(user);
-    } catch (error) {
-        res.status(500).send({message:"Server Error "+error.message});
-    }
-} 
+ 
 
 // UPDATE PROFILE
 async function updateProfile(req,res){
