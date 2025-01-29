@@ -29,7 +29,7 @@ async function signup(req,res){
     // JWT AUTHENTICATION HERE
         generateToken(newUser._id, res);
         await newUser.save();
-        return res.status(201).send({message:"User Created",user:newUser});
+        return res.status(201).send(newUser);
     }
     else{
         return res.satus(400).send({message:"User not created"});
@@ -58,7 +58,7 @@ async function login(req,res){
     }
     else{
     generateToken(user._id, res);
-    return res.status(200).send({message:"Login Successful", user:user});
+    return res.status(200).send(user);
     }
     
     }

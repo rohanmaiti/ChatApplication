@@ -19,7 +19,6 @@ connectDB().then(()=>console.log("Connected to DB"))
 const authRoutes = require("./routes/auth.route.js");
 const messageRoutes = require("./routes/message.route.js");
 
-
 app.use(cors({
     origin:"http://localhost:5173",
     credentials:true,
