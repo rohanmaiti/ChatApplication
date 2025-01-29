@@ -82,6 +82,7 @@ function logout(req,res){
 // UPDATE PROFILE
 async function updateProfile(req,res){
     try {
+        console.log("Hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
         const {profilePic} = req.body;
         const userId = req.user._id;
         if (!profilePic) {
